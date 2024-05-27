@@ -8,6 +8,7 @@ public class MusicAndSound : MonoBehaviour
     [SerializeField] public Toggle SoundToggle;
     [SerializeField] public Toggle MusicToggle;
     [SerializeField] public AudioSource ButtonSound;
+    [SerializeField] public AudioSource Music;
 
     
     void Start()
@@ -43,5 +44,8 @@ public class MusicAndSound : MonoBehaviour
     {
         PlayerPrefs.SetInt("SoundToggle", SoundToggle.isOn ? 1 : 0);
         PlayerPrefs.SetInt("MusicToggle", MusicToggle.isOn ? 1 : 0);
+        if(MusicToggle.isOn == true){
+            Music.Play();
+        }
     }
 }

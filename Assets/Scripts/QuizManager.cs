@@ -11,18 +11,16 @@ using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour 
 {
-    public string Language;
+    private string Language;
     public TextMeshPro questionText;
-    [SerializeField]
-    TMP_Text Points;
-    [SerializeField]
-    TMP_Text Lifes;
-    [SerializeField]
-    TMP_Text End;
-    [SerializeField]
-    Time time;
-    [SerializeField]
-    Toggle SoundToggle;
+    [SerializeField] public Image[] GameEndButtons;
+    [SerializeField] public Sprite[] EndButtEng;
+    [SerializeField] public Sprite[] EndButtArm;
+    [SerializeField]TMP_Text Points;
+    [SerializeField] TMP_Text Lifes;
+    [SerializeField] TMP_Text End;
+    [SerializeField] Time time;
+    [SerializeField] Toggle SoundToggle;
     [SerializeField] AudioSource CorrectSound;
     [SerializeField] AudioSource WrongSound;
     int points_count = 0;
@@ -43,7 +41,12 @@ public class QuizManager : MonoBehaviour
     private void Start()
     {
         Language = LanguageManager.currentLanguage.ToString();
-        Debug.Log(Language);
+        for(int i = 0;i<GameEndButtons.Length;i++){
+            if(Language=="English"){
+                GameEndButtons[i].sprite = EndButtEng[i];
+            }
+            else  GameEndButtons[i].sprite = EndButtArm[i];
+        }
         if (Prefab.tag == "EnglishToArmenian")
         {
             questions = languageList.EtoA;
@@ -74,9 +77,12 @@ public class QuizManager : MonoBehaviour
 
         ShowQuestion(currentQuestionIndex);
     }
-    public void ResetGame()
+    public void GetMenu(){ 
+        SceneManager.LoadScene(0);       
+    }
+    public void RestartGame()
     {
-        SceneManager.LoadScene(0);
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     private void ShowQuestion(int index)

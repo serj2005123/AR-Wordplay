@@ -9,7 +9,6 @@ public class LanguageManager : MonoBehaviour
         English,
         Armenian
     }
-
     public static Language currentLanguage = Language.Armenian;
 
     [SerializeField] private Sprite[] englishButtonSprites;
