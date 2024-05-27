@@ -29,8 +29,7 @@ public class MusicAndSound : MonoBehaviour
         {
             MusicToggle.isOn = false;
         }
-
-
+       
     }
     public void ButtonClickSound()
     {
@@ -39,13 +38,15 @@ public class MusicAndSound : MonoBehaviour
             ButtonSound.Play();
         }
     }
-
+    public void PlayMusic(){
+        if(MusicToggle.isOn){
+            Music.Play();
+        }
+        else Music.Pause();
+    }
     void Update()
     {
         PlayerPrefs.SetInt("SoundToggle", SoundToggle.isOn ? 1 : 0);
         PlayerPrefs.SetInt("MusicToggle", MusicToggle.isOn ? 1 : 0);
-        if(MusicToggle.isOn == true){
-            Music.Play();
-        }
     }
 }
