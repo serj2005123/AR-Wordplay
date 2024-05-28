@@ -7,6 +7,7 @@ public class PrefabIconsChanged : MonoBehaviour
 {
 
     [SerializeField] Sprite OffSprite;
+    [SerializeField] MusicAndSound ButtonSound;
 
     Toggle toggle;
     Image DefaultImage;
@@ -27,6 +28,7 @@ public class PrefabIconsChanged : MonoBehaviour
     void OnSwitch(bool on)
     {
         DefaultImage.sprite = (on ? DefaultSprite : OffSprite);
+        ButtonSound.ButtonClickSound();
     }
 
     void OnDestroy()

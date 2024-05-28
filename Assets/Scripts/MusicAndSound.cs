@@ -24,10 +24,12 @@ public class MusicAndSound : MonoBehaviour
         if (PlayerPrefs.GetInt("MusicToggle") == 1)
         {
             MusicToggle.isOn = true;
+            PlayMusic();
         }
         else
         {
             MusicToggle.isOn = false;
+            PlayMusic();
         }
        
     }

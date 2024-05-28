@@ -6,8 +6,7 @@ public class SwitchToggle : MonoBehaviour {
    [SerializeField] RectTransform uiHandleRectTransform ;
    [SerializeField] Color backgroundActiveColor ;
    [SerializeField] Color handleActiveColor ;
-
-
+   [SerializeField] MusicAndSound ButtonSound;
 
    Image backgroundImage, handleImage ;
 
@@ -36,14 +35,10 @@ public class SwitchToggle : MonoBehaviour {
 
    void OnSwitch (bool on)
     {
-      //uiHandleRectTransform.anchoredPosition = on ? handlePosition * -1 : handlePosition ; // no anim
       uiHandleRectTransform.DOAnchorPos (on ? handlePosition * -1 : handlePosition, .4f).SetEase (Ease.InOutBack) ;
-
-      
       backgroundImage.DOColor (on ? backgroundActiveColor : backgroundDefaultColor, .6f) ;
-
-      
       handleImage.DOColor (on ? handleActiveColor : handleDefaultColor, .4f) ;
+      ButtonSound.ButtonClickSound();
    }
 
    void OnDestroy ( ) {

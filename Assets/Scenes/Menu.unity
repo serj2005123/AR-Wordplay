@@ -832,6 +832,7 @@ MonoBehaviour:
   uiHandleRectTransform: {fileID: 1249082011}
   backgroundActiveColor: {r: 0.47450984, g: 0.70980394, b: 0.8745099, a: 1}
   handleActiveColor: {r: 1, g: 1, b: 1, a: 1}
+  ButtonSound: {fileID: 517152568}
 --- !u!114 &561658212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,18 +880,6 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 517152568}
-        m_TargetAssemblyTypeName: MusicAndSound, Assembly-CSharp
-        m_MethodName: ButtonClickSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 517152568}
         m_TargetAssemblyTypeName: MusicAndSound, Assembly-CSharp
         m_MethodName: PlayMusic
@@ -1844,6 +1833,7 @@ MonoBehaviour:
   uiHandleRectTransform: {fileID: 1831376914}
   backgroundActiveColor: {r: 0.47450984, g: 0.70980394, b: 0.8745099, a: 1}
   handleActiveColor: {r: 1, g: 1, b: 1, a: 1}
+  ButtonSound: {fileID: 517152568}
 --- !u!114 &1018520918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1890,19 +1880,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 517152568}
-        m_TargetAssemblyTypeName: MusicAndSound, Assembly-CSharp
-        m_MethodName: ButtonClickSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_IsOn: 1
 --- !u!1 &1154715405
 GameObject:
@@ -2025,12 +2003,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154715405}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1498.9523}
+  m_LocalScale: {x: 14.989523, y: 14.989523, z: 14.989523}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1817094318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206606458
 GameObject:
@@ -3840,6 +3818,7 @@ RectTransform:
   - {fileID: 3352950}
   - {fileID: 2130131970}
   - {fileID: 249756939}
+  - {fileID: 1154715407}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4647,4 +4626,3 @@ SceneRoots:
   - {fileID: 1817094318}
   - {fileID: 629153373}
   - {fileID: 869010073}
-  - {fileID: 1154715407}
